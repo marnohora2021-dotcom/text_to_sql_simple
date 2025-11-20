@@ -17,7 +17,6 @@ class Persona(Base):
 
 Base.metadata.create_all(engine)
 
-# --- Función básica de "Text-to-SQL" ---
 def interpretar_texto(texto):
     """
     Interpreta una instrucción en texto simple y devuelve una acción SQL.
@@ -26,6 +25,7 @@ def interpretar_texto(texto):
     - muestra todas las personas
     """
     palabras = texto.lower().split()
+
 
     if palabras[0] == "agrega" and palabras[1] == "persona":
         nombre = palabras[2]
